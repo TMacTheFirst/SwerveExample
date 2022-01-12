@@ -4,8 +4,6 @@
 
 package frc.robot;
 
-import com.swervedrivespecialties.swervelib.SdsModuleConfigurations;
-
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 
 /**
@@ -62,9 +60,9 @@ public final class Constants {
      * <p>
      * This is a measure of how fast the robot should be able to drive in a straight line.
      */
-    public static final double MAX_VELOCITY_METERS_PER_SECOND = 6380.0 / 60.0 *
-        SdsModuleConfigurations.MK3_STANDARD.getDriveReduction() *
-        SdsModuleConfigurations.MK3_STANDARD.getWheelDiameter() * Math.PI;
+    public static final double MAX_VELOCITY_METERS_PER_SECOND = 6380.0 / 60.0 * (16.0 / 48.0) * (28.0 / 16.0) * (15.0 / 60.0) * 0.1016 * Math.PI;
+        // (16.0 / 48.0) * (28.0 / 16.0) * (15.0 / 60.0) * //Drive Reduction
+        // 0.1016 * Math.PI;   //Wheel Diameter
 
     /**
      * The maximum angular velocity of the robot in radians per second.
